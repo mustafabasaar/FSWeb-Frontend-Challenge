@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
-
+import { useLocalStorage } from "../hooks/useLocalStorage";
 export const SiteContext = createContext();
 
 const initialDataeng = {
@@ -42,8 +42,8 @@ const initialDatatr = {
 };
 
 export const SiteContextProvider = ({ children }) => {
-  const [lang, setLang] = useState("TÜRKÇE");
-  const [theme, setTheme] = useState("DARK");
+  const [lang, setLang] = useLocalStorage("lang", "TÜRKÇE");
+  const [theme, setTheme] = useLocalStorage("theme", "DARK");
   const [store, setStore] = useState(initialDataeng);
   const [projects, setProjects] = useState([]);
   useEffect(() => {
