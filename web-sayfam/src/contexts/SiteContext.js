@@ -7,7 +7,7 @@ const initialDataeng = {
   baslik: {
     hero: "Creative thinker Minimalism lover",
     heroabout:
-      "Hi, I’m Almila. I’m a full-stack developer. If you are looking for a Developer who to craft solid and scalable frontend products with great user experiences. Let’s shake hands with me.",
+      "Hello! I'm Mustafa Başar, a graduate of the WorkinTech Full-Stack Developer Program. As a software developer, I possess proficiency in technologies such as Java, React,Redux,Axios,HTML,Css and Spring Boot, honed during my 6-month intensive training.",
     profile: "Profile",
     skills: "Skills",
     projects: "Projects",
@@ -26,7 +26,7 @@ const initialDatatr = {
   baslik: {
     hero: "Yaratıcı düşünür Minimalizm aşığı",
     heroabout:
-      "Merhaba, ben Almila. Full-stack geliştiriciyim. Harika kullanıcı deneyimlerine sahip sağlam ve ölçeklenebilir ön uç ürünleri hazırlayacak bir Geliştirici arıyorsanız. Haydi el sıkışalım.",
+      "Merhaba! Ben WorkinTech Full-Stack Developer Programı mezunu Mustafa Başar. Bir yazılım geliştiricisi olarak Java, React,Redux,Axios,HTML,Css ve Spring Boot gibi teknolojilere hakimiyetimi 6 ay süren yoğun eğitimim boyunca geliştirdim.",
     profile: "Profil",
     skills: "Yetenekler",
     projects: "Projeler",

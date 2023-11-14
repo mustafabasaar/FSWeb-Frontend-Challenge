@@ -26,14 +26,8 @@ function Profile(props) {
         </div>
         <div className="profile-about-area">
           <h3 className="profile-third-title">{store.baslik.aboutme}</h3>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam
-            aut, odit laborum aliquam voluptatum nisi mollitia.
-          </p>
-          <p>
-            Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod
-            deserunt quam temporibus cumque magnam!
-          </p>
+          <p>{props.profildata.abouttextone}</p>
+          <p>{props.profildata.abouttexttwo}</p>
         </div>
       </div>
     </div>

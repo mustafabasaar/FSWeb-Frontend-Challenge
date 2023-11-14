@@ -1,6 +1,6 @@
 import ModeSwitch from "./components/ModeSwitch";
 import Header from "./components/Header";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
 import Profile from "./components/Profile";
@@ -10,17 +10,42 @@ import { useContext } from "react";
 import { SiteContext } from "./contexts/SiteContext";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const initialDAta = {
-  name: "Almila Su",
-  birthday: "24.03.1996",
-  cityofresidence: "Ankara",
-  education: "Hacettepe Ünv. Biyoloji Lisans,2016",
-  preference: "Frontend, UI",
-  mail: "almilasucode@gmail.com",
+const initialDataTR = {
+  name: "Mustafa Başar",
+  birthday: "11.09.1996",
+  cityofresidence: "İzmir",
+  education: "Dokuz Eylul Üni. Endüstri Müh",
+  preference: "FullStack Developer",
+  mail: "mustafabasaaar@gmail.com",
+  abouttextone:
+    "Problem çözme becerilerim karmaşık projelere etkili çözümler sunmamı sağlıyor. Takım çalışması, iletişim ve liderlik becerileri ile uyumlu bir çalışma ortamı yaratmayı hedefliyorum.",
+  abouttexttwo:
+    "Müşteri odaklı yaklaşım ve çözüm odaklı düşünce yapısıyla başarılı projelere katkıda bulunmayı hedefliyorum.",
+};
+const initialDataENG = {
+  name: "Mustafa Basar",
+  birthday: "11.09.1996",
+  cityofresidence: "Izmir",
+  education: "Dokuz Eylul Uni. Industrial Eng.",
+  preference: "FullStack Developer",
+  mail: "mustafabasaaar@gmail.com",
+  abouttextone:
+    "My problem-solving skills enable me to provide effective solutions for complex projects. I aim to create a harmonious work environment through teamwork, communication, and leadership skills.",
+  abouttextwo:
+    "With a customer-centric approach and a solution-oriented mindset, I aspire to contribute to successful projects.",
 };
 function App() {
-  const [profildata, setProfildata] = useState(initialDAta);
-  const { theme } = useContext(SiteContext);
+  const [profildata, setProfildata] = useState(initialDataTR);
+  const { theme, lang } = useContext(SiteContext);
+
+  useEffect(() => {
+    if (lang === "ENG") {
+      setProfildata(initialDataTR);
+    }
+    if (lang === "TÜRKÇE") {
+      setProfildata(initialDataENG);
+    }
+  }, [lang]);
 
   return (
     <>

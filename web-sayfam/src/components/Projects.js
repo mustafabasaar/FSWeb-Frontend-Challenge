@@ -9,9 +9,13 @@ function Projects() {
       <div className="projects-area">
         {projects.map((project) => (
           <div key={project.id} className="project-area">
-            <img src={project.img} alt="projects componensts resim 1" />
-            <h3 className="project-title">{project.name}</h3>
-            <p className="project-explanation">{project.projectsexp}</p>
+            <img
+              src={project.img}
+              className="img-container"
+              alt="projects componensts resim 1"
+            />
+            <h3 className="project-title">{project.head}</h3>
+            <p className="project-explanation">{project.projectexp}</p>
             <div className="project-buttons">
               <button className="project-button">react</button>
               <button className="project-button">redux</button>
@@ -19,14 +23,14 @@ function Projects() {
             </div>
             <div className="project-link">
               <a
-                href="https://github.com/mustafabasaar?tab=repositories"
+                href={project.githublink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 GitHub
               </a>
               <a
-                href="https://app.workintech.com"
+                href={project.projectlink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
